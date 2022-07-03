@@ -1,0 +1,8 @@
+---
+ansible_user: vagrant
+ansible_password: vagrant
+clickhouse_version: "22.2.2.1"
+clickhouse_listen_host_default:
+  - "127.0.0.1"
+vector_version: "0.22.3"
+nginx_user_name: "root"
