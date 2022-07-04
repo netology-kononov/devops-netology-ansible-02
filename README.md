@@ -1,12 +1,13 @@
-# Playbook для установки Clickhouse и Vector #
+# Playbook для установки Clickhouse, Vector и Lighthouse #
 
-## Playbook содержит 2 сценария. ##  
-Сценарий **Install Clickhouse** производит установку Clickhouse версии, указанной в переменной *clickhouse_version*.  
-Установка происходит списком rpm-пакетов из переменной *clickhouse_packages*.  
+## Playbook использует 3 роли. ##  
+Роль AlexeySetevoi/ansible-clickhouse производит установку Clickhouse версии, указанной в переменной *clickhouse_version*.  
 Установка происходит на хосты из группы *clickhouse*.
 
-Сценарий **Install Vector** производит установку Vector версии, указанной в переменной *vector_version*.  
-Установка происходит через менеджер пакетов yum.  
-Установка происходит на хосты из группы *clickhouse*.  
+Роль netology-kononov/vector-role производит установку Vector версии, указанной в переменной *vector_version*.  
+Установка происходит на хосты из группы *vector*.  
 
-Тэг **08-ansible-02-playbook** установлен на результат выполнения домашнего задания № 8.2.
+Роль netology-kononov/lighthouse-role производит установку Lighthouse.  
+Установка происходит на хосты из группы *lighthouse*.  
+
+Тэг **08-ansible-03-roles** установлен на результат выполнения домашнего задания № 8.3.
