@@ -3,3 +3,11 @@
     scm: git
     version: "1.11.0"
     name: clickhouse 
+  - src: git@github.com:netology-kononov/vector-role.git
+    scm: git
+    version: "0.1.1"
+    name: vector
+  - src: git@github.com:netology-kononov/lighthouse-role.git
+    scm: git
+    version: "0.1.2"
+    name: lighthouse 
