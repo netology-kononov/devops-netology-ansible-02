@@ -31,11 +31,11 @@
 - name: Install Vector
   hosts: vector
   roles:
-    - vector-role
+    - vector
 - name: Install Lighthouse
   hosts: lighthouse
   roles:
-    - lighthouse-role
+    - lighthouse
 
 - name: Lighthouse post-install dependencies
   hosts: lighthouse

@@ -1,0 +1,22 @@
+---
+- name: Vector-Role | Get setup script
+  ansible.builtin.get_url:
+    url: "https://repositories.timber.io/public/vector/cfg/setup/bash.rpm.sh"
+    dest: "/tmp/bash.rpm.sh"
+    mode: '0777'
+- name: Vector-Role | Run setup script
+  become: true
+  ansible.builtin.command:
+    cmd: "/tmp/bash.rpm.sh"
+  changed_when: true
+- name: Vector-Role | Yum install vector
+  become: true
+  ansible.builtin.yum:
+    name: vector-{{ vector_version }}
+    state: installed
+- name: Vector-Role | Start vector service
+  become: true
+  ansible.builtin.service:
+    name: vector
+    state: started
+    enabled: true

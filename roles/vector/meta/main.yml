@@ -1,0 +1,18 @@
+galaxy_info:
+  role_name: vector
+  author: netology-kononov
+  description: Role for installation Vector
+  company: netology-edu
+
+  license: MIT
+
+  min_ansible_version: "2.12"
+
+  platforms:
+    - name: EL
+      versions:
+        - all
+
+  galaxy_tags: []
+
+dependencies: []

@@ -78,7 +78,7 @@ F: You can create custom users:
 clickhouse_users_custom:
       - { name: "testuser",
           password_sha256_hex: "f2ca1bb6c7e907d06dafe4687e579fce76b37e4e93b7605022da52e6ccc26fd2",
-          networks: "{{ clickhouse_rks_default }}",
+          networks: "{{ clickhouse_networks_default }}",
           profile: "default",
           quota: "default",
           dbs: [ testu1 ] ,
